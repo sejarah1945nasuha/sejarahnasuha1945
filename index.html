@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pertempuran Surabaya 1945 – Sejarah Bergaya Cerita</title>
+  <meta name="description" content="Website ringkas tentang Pertempuran Surabaya 10 November 1945 dengan alur cerita yang menerapkan historical thinking dan heuristik."/>
+  <style>
+    :root{
+      --bg:#0b0e1a; --card:#121528; --soft:#1c2140; --txt:#e8ecff; --muted:#a6b0d9;
+      --pri:#6a7bff; --sec:#49d2ff; --acc:#94ffa5;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,Arial,sans-serif;color:var(--txt);background:
+      radial-gradient(1200px 700px at 10% -10%, rgba(106,123,255,.25), transparent 60%),
+      radial-gradient(1000px 700px at 110% 10%, rgba(73,210,255,.2), transparent 60%),
+      linear-gradient(180deg, #0b0e1a 0%, #0b0e1a 100%) fixed;}
+
+    a{color:var(--sec);text-decoration:none}
+    .container{max-width:1100px;margin:auto;padding:0 20px}
+
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(11,14,26,.72);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:10px;align-items:center}
+    .brand svg{width:28px;height:28px}
+    .brand b{letter-spacing:.3px}
+    .menu{display:flex;gap:18px}
+    .menu a{color:var(--txt);opacity:.9}
+    .menu a:hover{opacity:1;color:#fff}
+
+    /* HERO */
+    .hero{padding:72px 0 40px;border-bottom:1px solid rgba(255,255,255,.07)}
+    .hero h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:8px 0}
+    .lead{color:var(--muted);max-width:780px}
+    .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;background:var(--pri);color:#fff;font-weight:600;border:1px solid rgba(255,255,255,.08);box-shadow:0 8px 24px rgba(106,123,255,.25);}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.alt{background:transparent;border:1px solid rgba(255,255,255,.18)}
+
+    .hero-img{margin-top:28px;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+    .hero-img img{width:100%;display:block}
+    .cap{font-size:12px;color:var(--muted);margin-top:8px}
+
+    /* SECTION */
+    section{padding:54px 0}
+    h2{font-size:clamp(22px,3.5vw,30px);margin:0 0 16px}
+    .sub{color:var(--muted);margin-top:-8px}
+
+    /* GRID CARDS */
+    .grid{display:grid;grid-template-columns:1fr;gap:18px}
+    @media(min-width:760px){.grid{grid-template-columns:repeat(2,1fr)}}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:18px}
+    .card h3{margin:0 0 6px}
+    .card p{margin:0}
+
+    /* TIMELINE */
+    .timeline{position:relative;margin:26px 0 0;padding-left:18px}
+    .timeline:before{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(var(--sec),transparent)}
+    .t-item{position:relative;margin:0 0 16px;padding-left:22px;opacity:.1;transform:translateY(10px);transition:all .6s ease}
+    .t-item.reveal{opacity:1;transform:none}
+    .t-item:before{content:"";position:absolute;left:-4px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--sec);box-shadow:0 0 0 4px rgba(73,210,255,.15)}
+    .t-card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px}
+    .t-date{font-weight:700;color:var(--acc);font-size:13px;margin-bottom:6px}
+
+    /* MEDIA */
+    figure{margin:12px 0}
+    figcaption{font-size:12px;color:var(--muted)}
+    .media{display:grid;grid-template-columns:1fr;gap:12px}
+    @media(min-width:760px){.media{grid-template-columns:1fr 1fr}}
+    .media img{width:100%;height:100%;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,.08)}
+
+    /* FOOTER */
+    footer{padding:40px 0;border-top:1px solid rgba(255,255,255,.08);color:var(--muted)}
+
+    /* UTILS */
+    .muted{color:var(--muted)}
+    .note{background:rgba(148,255,165,.08);border:1px solid rgba(148,255,165,.25);padding:12px;border-radius:10px}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 8l8-5 8 5v8l-8 5-8-5V8z" stroke="url(#g)" stroke-width="1.5"/><defs><linearGradient id="g" x1="0" x2="24" y1="0" y2="24"><stop stop-color="#6a7bff"/><stop offset="1" stop-color="#49d2ff"/></linearGradient></defs></svg>
+        <b>Pertempuran Surabaya 1945</b>
+      </div>
+      <nav class="menu">
+        <a href="#awal">Awal Konflik</a>
+        <a href="#puncak">10 November</a>
+        <a href="#akibat">Dampak</a>
+        <a href="#sumber">Catatan Sumber</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Kisah 10 November: Surabaya Melawan</h1>
+        <p class="lead">Cerita mengalir tentang salah satu pertempuran terbesar setelah Proklamasi—disusun dengan jejak sumber tepercaya dan cara berpikir sejarah: melihat konteks, sebab, jalannya peristiwa, dampak, hingga maknanya bagi Indonesia.</p>
+        <div class="cta">
+          <a class="btn" href="#puncak">Baca Inti Peristiwa</a>
+          <a class="btn alt" href="#awal">Mulai dari Latar</a>
+        </div>
+        <div class="hero-img">
+          <img src="https://statik.tempo.co/data/2015/11/08/id_452355/452355_650.jpg" alt="Bung Tomo berbicara di radio, 1945" loading="lazy">
+        </div>
+        <p class="cap">Bung Tomo yang suaranya mengobarkan semangat perlawanan di Surabaya, 1945. (Wikimedia Commons)</p>
+      </div>
+    </section>
+
+    <section id="awal">
+      <div class="container">
+        <h2>Apa yang Memanaskan Surabaya?</h2>
+        <p class="sub">Setelah Jepang menyerah (Agustus 1945), Sekutu datang melucuti pasukan Jepang. Di balik itu, Belanda menumpang untuk memulihkan kekuasaannya. Surabaya bergolak: pemuda mengambil senjata, rakyat menjaga kemerdekaan yang baru diproklamasikan.</p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Ketegangan Meningkat</h3>
+            <p>Insiden bendera di Hotel Yamato (19 September) menyimbolkan penolakan terhadap simbol penjajahan. Senjata-senjata bekas Jepang dikuasai laskar, membuat Sekutu menuntut pelucutan.</p>
+          </article>
+          <article class="card">
+            <h3>Insiden Mallaby</h3>
+            <p>29 Oktober 1945, Brigjen A. W. S. Mallaby, komandan Inggris di Surabaya, tewas dalam kekacauan kontak senjata. Peristiwa ini menjadi pemicu balasan besar-besaran.</p>
+          </article>
+        </div>
+
+        <div class="media">
+          <figure>
+            <img src="https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2021/11/05/845794997.jpg" alt="Hotel Yamato (Majapahit) masa kolonial" loading="lazy">
+            <figcaption>Hotel Yamato (kini Majapahit), lokasi perobekan bendera Belanda. (Wikimedia Commons)</figcaption>
+          </figure>
+          <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXaFlQclLrmWzi3ETlpG5fk2eKXAbYXFvMZ2JHPFdxV-xI4c2EotHGfDM&s=10" loading="lazy">
+            <figcaption>Pasukan Sekutu memasuki Surabaya, 1945. (Wikimedia Commons)</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="puncak">
+      <div class="container">
+        <h2>10 November 1945: Serangan Tiga Matra</h2>
+        <p class="sub">Ultimatum Sekutu agar rakyat Surabaya menyerahkan senjata ditolak. Pagi 10 November, tembakan artileri, serangan udara, dan gerak tank mengawali pertempuran besar di kota.</p>
+
+        <div class="timeline" id="tl">
+          <div class="t-item"><div class="t-card"><div class="t-date">Pukul Dini Hari</div>
+            <p>Artileri Inggris menembaki titik-titik pertahanan. Jembatan dan simpul jalan strategis jadi sasaran.</p></div></div>
+          <div class="t-item"><div class="t-card"><div class="t-date">Pagi Hari</div>
+            <p>Tank dan infanteri maju dari pelabuhan dan markas-markas. Pertempuran jarak dekat terjadi di kampung-kampung padat.</p></div></div>
+          <div class="t-item"><div class="t-card"><div class="t-date">Siang–Malam</div>
+            <p>Koordinasi laskar–TNI mempertahankan sektor-sektor kota. Siaran radio Bung Tomo menguatkan moral, walau perlengkapan terbatas.</p></div></div>
+          <div class="t-item"><div class="t-card"><div class="t-date">Hari-hari Berikutnya</div>
+            <p>Pertempuran melebar menjadi perang kota. Banyak warga mengungsi, korban berjatuhan di kedua pihak.</p></div></div>
+        </div>
+
+        <figure>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu_nYlRU73Rag9WD6KuuRP5GzDsDlbGlAvi0OUENRlvF2Of79Cr7YugSY&s=10" loading="lazy"/>
+          <figcaption>Pasukan Inggris dengan kendaraan lapis baja di Surabaya. (Wikimedia Commons)</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="akibat">
+      <div class="container">
+        <h2>Sesudah Dentum Mereda</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Dampak Kemanusiaan</h3>
+            <p>Ribuan pejuang dan warga gugur. Kota mengalami kerusakan berat. Namun, tekad mempertahankan kemerdekaan tak padam.</p>
+          </article>
+          <article class="card">
+            <h3>Gaung ke Dunia</h3>
+            <p>Pertempuran Surabaya memperlihatkan kepada dunia bahwa Republik Indonesia bersungguh-sungguh mempertahankan kemerdekaannya—menguatkan dukungan internasional.</p>
+          </article>
+          <article class="card">
+            <h3>Makna bagi Bangsa</h3>
+            <p>10 November dikenang sebagai Hari Pahlawan: simbol keberanian, pengorbanan, dan persatuan rakyat.</p>
+          </article>
+          <article class="card note">
+            <h3>Kenapa Kita Tahu Ini?</h3>
+            <p class="muted">Kisah disusun dari dokumen resmi, laporan pasukan Sekutu, rekaman pidato, kesaksian pejuang, serta penelitian sejarah. Sumber-sumber itu saling diperiksa untuk membangun cerita yang utuh.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sumber">
+      <div class="container">
+        <h2>Catatan Sumber (Ringkas)</h2>
+        <p class="muted">Beberapa rujukan visual di halaman ini berasal dari Wikimedia Commons (domain publik/lisensi bebas). Untuk pendalaman, gunakan buku-buku sejarah Revolusi Indonesia dan arsip pidato 1945.</p>
+        <ul class="muted">
+          <li>Foto Bung Tomo (Wikimedia Commons).</li>
+          <li>Hotel Yamato/Majapahit, Surabaya (Wikimedia Commons).</li>
+          <li>Pasukan Sekutu di Surabaya, 1945 (Wikimedia Commons).</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 — Pertempuran Surabaya 1945 • Dibuat untuk pembelajaran sejarah(Nasuha ismail).</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll untuk anchor
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href');
+        if(id.length>1){
+          e.preventDefault();
+          document.querySelector(id)?.scrollIntoView({behavior:'smooth'});
+        }
+      })
+    })
+
+    // Reveal animasi timeline saat muncul di viewport
+    const io=new IntersectionObserver((entries)=>{
+      entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('reveal')}})
+    },{threshold:.15});
+    document.querySelectorAll('.t-item').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
